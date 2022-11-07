@@ -1,4 +1,6 @@
 export const surveyJson = {
+    "title": "Lovebuddy",
+    "description": "Send your loved ones your secret desires",
     "logoPosition": "right",
     "pages": [
         {
