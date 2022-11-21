@@ -41,8 +41,8 @@ StylesManager.applyTheme("defaultV2");
 function App() {
   const survey = new Model(surveyJson);
   const alertResults = useCallback((sender) => {
-    // const results = JSON.stringify(sender.data);
-    // alert(results);
+    const results = JSON.stringify(sender.data);
+    alert(results);
     // saveSurveyResults(
     //   "https://your-web-service.com/" + SURVEY_ID,
     //   sender.data
