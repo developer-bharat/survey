@@ -6,33 +6,33 @@ import { StylesManager, Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { surveyJson } from './json.js';
 
-// import { useVisitorData } from '@fingerprintjs/fingerprintjs-pro-react'
+import { useVisitorData } from '@fingerprintjs/fingerprintjs-pro-react'
 
-// const Visitor = props => {
-//   const {
-//     isLoading,
-//     error,
-//     data,
-//   } = useVisitorData();
+const Visitor = props => {
+  const {
+    isLoading,
+    error,
+    data,
+  } = useVisitorData();
 
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-//   if (error) {
-//     return <div>An error occurred: {error.message}</div>;
-//   }
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>An error occurred: {error.message}</div>;
+  }
 
-//   if (data) {
-//     // perform some logic based on the visitor data
-//     return (
-//       <div>
-//         Welcome {data.visitorFound ? 'back ' : ''}{data.visitorId}
-//       </div>
-//     );
-//   } else {
-//     return <div></div>;
-//   }
-// }
+  if (data) {
+    // perform some logic based on the visitor data
+    return (
+      <div>
+        Welcome {data.visitorFound ? 'back ' : ''}{data.visitorId}
+      </div>
+    );
+  } else {
+    return <div></div>;
+  }
+}
 
 // const SURVEY_ID = 1;
 
@@ -52,7 +52,7 @@ function App() {
   survey.onComplete.add(alertResults);
 
   return (<div>
-    {/* <Visitor/> */}
+    <Visitor/>
     <Survey model={survey} />
   </div>);
 }
